@@ -235,12 +235,61 @@
       <div class="input-group-prepend">
         <button class="btn btn-outline-secondary" type="button">GO</button>
       </div>
-      <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1"
-        data-toggle="tooltip" data-placement="top" title="請輸入搜尋內容">
+      <input type="text" style="border-width: 3px;" class="form-control" placeholder="" aria-label=""
+        aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="top" title="請輸入搜尋內容">
     </div>
     <div>
-     <a href="#" class="btn btn-outline-primary btn-sm"><i class="fas fa-shopping-cart fa-2x "></i>快速下單</a>
+      <button href="#" style="border-width: 3px;" class="btn btn-outline-primary btn-sm"><i
+          class="fas fa-shopping-cart fa-2x " data-toggle="modal" data-target="#edit"
+          data-title="快速下單"></i>快速下單</button>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-light">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">save change</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="remove" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-light">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-outline-danger">確認刪除</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
   </div>
 
   <table class="w-100 table-hover ml-3">
@@ -266,7 +315,8 @@
         <td class="text-center">
           <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
             <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-outline-secondary btn-sm">編輯</button>
+              <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#edit"
+                data-title="編輯 超好吃牛肉麵" data-backdrop="static">編輯</button>
               <button type="button" class="btn btn-outline-secondary btn-sm">查看</button>
               <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
@@ -276,7 +326,8 @@
                 <a class="dropdown-item" href="#">詳細資訊</a>
                 <a class="dropdown-item" href="#">其他</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item text-danger" href="#">刪除訂單</a>
+                <a class="dropdown-item text-danger" href="#" data-toggle="modal" data-target="#remove"
+                data-title=" 超好吃牛肉麵" data-backdrop="static">刪除訂單</a>
               </div>
             </div>
         </td>
@@ -370,19 +421,38 @@
       </nav>
     </div>
   </div>
-  
+
+
 
 
   <footer class="bg-secondary text-light mt-3">
     <div class="p-2 text-center">電商後台管理系統</div>
   </footer>
 
-  
-
-
-
-
 </body>
+
+<script>
+  $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+
+    //編輯modal 事件
+    $('#edit').on('show.bs.modal', function (event) {
+      var btn = $(event.relatedTarget);
+      var title = btn.data('title');
+
+      var modal = $(this);
+      modal.find('.modal-title').text(title);
+    })
+    $('#remove').on('show.bs.modal', function (event) {
+      var btn = $(event.relatedTarget);
+      var title = btn.data('title');
+
+      var modal = $(this);
+      modal.find('.modal-title').text('確認刪除'+title);
+    })
+  });
+</script>
+
 <script>
   $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
