@@ -37,7 +37,7 @@
           <a class="nav-link text-light" href="#">首頁<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="#">列表</a>
+          <a class="nav-link text-light" href="./dashboard.html`">dasboard</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-md-0">
@@ -48,46 +48,191 @@
   </nav>
   <div class="container-fluid mt-4 main">
     <div class="row mb-4">
-      <div class="col-lg-3 col-6">
+      <div class="col-sm-6 col-md-6 col-lg-3">
         <div class="card rounded-0 h-100">
           <div class="card-body d-flex align-items-center">
             <i class="fas fa-money-check-alt fa-3x text-secondary mr-2"></i>
             <div class="text-center w-100">
               <div class="h5">今日營收</div>
-              <div class="h3">192,000</div>
+              <div class="h3">119,000</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-6">
+      <div class="col-sm-6 col-md-6 col-lg-3">
         <div class="card rounded-0">
           <div class="card-body d-flex align-items-center">
             <i class="fas fa-users fa-3x text-secondary mr-2"></i>
             <div class="text-center w-100">
               <div class="h5">會員增加</div>
-              <div class="h3">192</div>
+              <div class="h3">192,000</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-6">
+      <div class="col-sm-6 col-md-6 col-lg-3">
         <div class="card rounded-0 h-100">
           <div class="card-body d-flex align-items-center">
             <i class="fas fa-paperclip fa-3x text-secondary mr-2"></i>
             <div class="text-center w-100">
               <div class="h5">訂單數</div>
-              <div class="h3">320</div>
+              <div class="h3">320,000</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-6">
+      <div class="col-sm-6 col-md-6 col-lg-3">
         <div class="card rounded-0">
           <div class="card-body d-flex align-items-center">
             <i class="fas fa-paste fa-3x text-secondary mr-2"></i>
             <div class="text-center w-100">
               <div class="h5">待出貨數</div>
-              <div class="h3">250</div>
+              <div class="h3">250,000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row mb-4">
+      <section class="col-lg-8">
+        <div class="card rounded-0">
+          <div class="card-header">
+            用戶來源
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-8">
+                <canvas id="barCanvas"></canvas>
+              </div>
+              <div class="col-lg-4">
+                <h4 class="text-center">用戶來源資訊</h4>
+                <p class="text-center mt-3">Google Chrome 市占率從 68.5% 增長到 69.18%，依舊穩居第一。
+                  微軟 Chromium 版 Edge 市占率從 7.59% 增長到 7.76%。
+                  Firefox 從 7.19% 增長到 7.25%。</p>
+                <h6 class="mt-3">google來源</h6>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+                <div class="mt-3">ig來源</div>
+                <div class="progress">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="mt-3">yahoo來源</div>
+                <div class="progress">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="mt-3">facebook來源</div>
+                <div class="progress">
+                  <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="col-lg-4">
+        <div class="card h-100">
+          <div class="card-header">瀏覽器使用者比例</div>
+          <div class="card-body d-flex align-items-center">
+            <canvas class="chart-item"></canvas>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card rounded-0">
+          <div class="card-header">
+            表頭
+          </div>
+          <div class="card-body">
+            <div class="d-flex mb-3">
+              <div class="form-inline">
+                <div class="form-group">
+                  <label for="month" class="sr-only">月份</label>
+                  <select name="" id="month" class="form-control form-control-sm">
+                    <option value="8">8月</option>
+                    <option value="9">9月</option>
+                    <option value="10">10月</option>
+                    <option value="11">11月</option>
+                    <option value="12">12月</option>
+                  </select>
+                </div>
+
+              </div>
+              <div class="ml-auto">
+                <a href="#" class="btn btn-outline-secondary btn-sm">下載報表</a>
+                <a href="#" class="btn btn-outline-secondary btn-sm">訂單管理</a>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="w-100 table-hover table">
+                <thead>
+                  <tr>
+                    <th class="text-right">日期</th>
+                    <th class="text-right">訂單數</th>
+                    <th class="text-right">退費數</th>
+                    <th class="text-right">出貨數</th>
+                    <th class="text-right">有問題貨品</th>
+                    <th class="text-right">營業額</th>
+                    <th class="text-right">淨利潤</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-right">9/1</td>
+                    <td class="text-right">300</td>
+                    <td class="text-right">1</td>
+                    <td class="text-right">250</td>
+                    <td class="text-right">3</td>
+                    <td class="text-right">$5,000</td>
+                    <td class="text-right">$166,000</td>
+                  </tr>
+                  <tr>
+                    <td class="text-right">9/2</td>
+                    <td class="text-right">600</td>
+                    <td class="text-right">1</td>
+                    <td class="text-right">250</td>
+                    <td class="text-right">4</td>
+                    <td class="text-right">$9,000</td>
+                    <td class="text-right">$18,000</td>
+                  </tr>
+                  <tr>
+                    <td class="text-right">9/3</td>
+                    <td class="text-right">900</td>
+                    <td class="text-right">1</td>
+                    <td class="text-right">50</td>
+                    <td class="text-right">5</td>
+                    <td class="text-right">$56,000</td>
+                    <td class="text-right">$58,000</td>
+                  </tr>
+                  <tr>
+                    <td class="text-right">9/4</td>
+                    <td class="text-right">1200</td>
+                    <td class="text-right">1</td>
+                    <td class="text-right">950</td>
+                    <td class="text-right">3</td>
+                    <td class="text-right">$26,000</td>
+                    <td class="text-right">$18,000</td>
+                  </tr>
+                  <tr>
+                    <td class="text-right">9/5</td>
+                    <td class="text-right">1500</td>
+                    <td class="text-right">1</td>
+                    <td class="text-right">250</td>
+                    <td class="text-right">3</td>
+                    <td class="text-right">$2,000</td>
+                    <td class="text-right">$1,000</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -95,254 +240,144 @@
     </div>
   </div>
 
-  <div class="row mb-4">
-    <section class="col-lg-8">
-      <div class="card rounded-0">
-        <div class="card-header">
-          用戶來源
-        </div>
-        <div class="card-body">
-          <div class="row">
-            <div class="col-lg-8">
-              <canvas id="barCanvas"></canvas>
-            </div>
-            <div class="col-lg-4">
-              <h4 class="text-center">用戶來源資訊</h4>
-              <p class="text-center mt-3">Google Chrome 市占率從 68.5% 增長到 69.18%，依舊穩居第一。
-                微軟 Chromium 版 Edge 市占率從 7.59% 增長到 7.76%。
-                Firefox 從 7.19% 增長到 7.25%。</p>
-              <h6 class="mt-3">google來源</h6>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
-                  aria-valuemax="100"></div>
-              </div>
-              <div class="mt-3">ig來源</div>
-              <div class="progress">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="25"
-                  aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <div class="mt-3">yahoo來源</div>
-              <div class="progress">
-                <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75"
-                  aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <div class="mt-3">facebook來源</div>
-              <div class="progress">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100"
-                  aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-          </div>
+  <div class="container">
+    <div class="row align-items-center justify-content-around ">
+      <div class="input-group p-3 w-50">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-secondary" style="border-width: 1px;" type="button">GO</button>
+          <input type="text" style="border-width: 3px;" class="form-control" aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="top" title="請輸入搜尋內容">
         </div>
       </div>
-    </section>
-    <section class="col-lg-4">
-      <div class="card h-100">
-        <div class="card-header">瀏覽器使用者比例</div>
-        <div class="card-body d-flex align-items-center">
-          <canvas class="chart-item"></canvas>
-        </div>
+      <div>
+        <button type="button" STYLE="border-width: 3px;" data-toggle="modal" data-target="#edit" data-title="快速下單"
+          class="btn btn-outline-primary btn-sm"><i class="fas fa-shopping-cart fa-2x "></i>快速下單</button>
       </div>
-    </section>
-  </div>
-
-  <div class="card rounded-0">
-    <div class="card-header">
-      表頭
     </div>
-    <div class="card-body">
-      <div class="d-flex mb-3">
-        <div class="form-inline">
-          <div class="form-group">
-            <label for="month" class="sr-only">月份</label>
-            <select name="" id="month" class="form-control form-control-sm">
-              <option value="9">9月</option>
-              <option value="10">10月</option>
-            </select>
-          </div>
+  </div>
+  
 
+  <!-- Modal -->
+  <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-light">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <div class="ml-auto">
-          <a href="#" class="btn btn-outline-secondary btn-sm">下載報表</a>
-          <a href="#" class="btn btn-outline-secondary btn-sm">訂單管理</a>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">save change</button>
         </div>
       </div>
-      <table class="w-100 table-hover">
-        <thead>
-          <tr>
-            <th class="text-right">日期</th>
-            <th class="text-right">訂單數</th>
-            <th class="text-right">退費數</th>
-            <th class="text-right">出貨數</th>
-            <th class="text-right">有問題貨品</th>
-            <th class="text-right">營業額</th>
-            <th class="text-right">淨利潤</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-right">9/1</td>
-            <td class="text-right">300</td>
-            <td class="text-right">1</td>
-            <td class="text-right">250</td>
-            <td class="text-right">3</td>
-            <td class="text-right">$5,000</td>
-            <td class="text-right">$166,000</td>
-          </tr>
-          <tr>
-            <td class="text-right">9/2</td>
-            <td class="text-right">600</td>
-            <td class="text-right">1</td>
-            <td class="text-right">250</td>
-            <td class="text-right">4</td>
-            <td class="text-right">$9,000</td>
-            <td class="text-right">$18,000</td>
-          </tr>
-          <tr>
-            <td class="text-right">9/3</td>
-            <td class="text-right">900</td>
-            <td class="text-right">1</td>
-            <td class="text-right">50</td>
-            <td class="text-right">5</td>
-            <td class="text-right">$56,000</td>
-            <td class="text-right">$58,000</td>
-          </tr>
-          <tr>
-            <td class="text-right">9/4</td>
-            <td class="text-right">1200</td>
-            <td class="text-right">1</td>
-            <td class="text-right">950</td>
-            <td class="text-right">3</td>
-            <td class="text-right">$26,000</td>
-            <td class="text-right">$18,000</td>
-          </tr>
-          <tr>
-            <td class="text-right">9/5</td>
-            <td class="text-right">1500</td>
-            <td class="text-right">1</td>
-            <td class="text-right">250</td>
-            <td class="text-right">3</td>
-            <td class="text-right">$2,000</td>
-            <td class="text-right">$1,000</td>
-          </tr>
-        </tbody>
-      </table>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="remove" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-light">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-danger">確認刪除</button>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="row align-items-center justify-content-around">
-    <div class="input-group mb-3 w-25 mt-3 pl-3">
-      <div class="input-group-prepend">
-        <button class="btn btn-outline-secondary" type="button">GO</button>
-      </div>
-      <input type="text" style="border-width: 3px;" class="form-control" placeholder="" aria-label=""
-        aria-describedby="basic-addon1" data-toggle="tooltip" data-placement="top" title="請輸入搜尋內容">
-    </div>
-    <div>
-      <button href="#" style="border-width: 3px;" class="btn btn-outline-primary btn-sm"><i
-          class="fas fa-shopping-cart fa-2x " data-toggle="modal" data-target="#edit"
-          data-title="快速下單"></i>快速下單</button>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header bg-primary text-light">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">save change</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="remove" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header bg-danger text-light">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-outline-danger">確認刪除</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-  </div>
-
-  <table class="w-100 table-hover ml-3">
-    <thead>
-      <tr>
-        <th class="text-right">#</th>
-        <th colspan="5" class="text-center">品項</th>
-        <th class="">name</th>
-        <th class="">phone</th>
-        <th class="">狀態</th>
-        <th class="">金額</th>
-        <th class="text-center">操作</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="text-right">1</td>
-        <td class="text-center" colspan="5">超好吃牛肉麵一盒</td>
-        <td class="">ryan<span class="ml-3 badge badge-pill badge-success">常客</span></td>
-        <td class=" ">0903505423</td>
-        <td class=" ">已出貨</td>
-        <td class=" ">$750</td>
-        <td class="text-center">
-          <div class="btn-group btn-group-toggle mb-3 mt-3" data-toggle="buttons">
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#edit"
-                data-title="編輯 超好吃牛肉麵" data-backdrop="static">編輯</button>
-              <button type="button" class="btn btn-outline-secondary btn-sm">查看</button>
-              <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                其他
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">詳細資訊</a>
-                <a class="dropdown-item" href="#">其他</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item text-danger" href="#" data-toggle="modal" data-target="#remove"
-                  data-title=" 超好吃牛肉麵" data-backdrop="static">刪除訂單</a>
-              </div>
-            </div>
-        </td>
-      </tr>
-      <div class="mt-3">
-        <tr class="">
-          <td class="text-right">2</td>
-          <td class="text-center" colspan="5">超好吃拉麵一盒</td>
-          <td class=" ">rona<span class="ml-3 badge badge-pill badge-danger">奧客</span></td>
-          <td class=" ">0930303030</td>
-          <td class="text-danger">未出貨</td>
-          <td class=" ">$500</td>
+  <div class="table-responsive">
+    <table class="w-100 table-hover table">
+      <thead>
+        <tr>
+          <th class="text-right">#</th>
+          <th colspan="5" class="text-center">品項</th>
+          <th class="">name</th>
+          <th class="">phone</th>
+          <th class="">狀態</th>
+          <th class="text-right">金額</th>
+          <th class="text-center">操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-right pl-3">1</td>
+          <td class="text-center" colspan="5">超好吃牛肉麵一盒</td>
+          <td class="">ryan<span class="ml-1 badge badge-pill badge-success">常客</span></td>
+          <td class=" ">0903505423</td>
+          <td class=" ">已出貨</td>
+          <td class="text-right">$750</td>
           <td class="text-center">
-            <div class="btn-group btn-group-toggle mb-3 mt-3" data-toggle="buttons">
+            <div class="btn-group btn-group-toggle m-3" data-toggle="buttons">
               <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-outline-secondary btn-sm" data-toggle="modal" data-target="#edit"
+                  data-title="編輯 超好吃牛肉麵" data-backdrop="static">編輯</button>
+                <button type="button" class="btn btn-outline-secondary btn-sm">查看</button>
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  其他
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">詳細資訊</a>
+                  <a class="dropdown-item" href="#">其他</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-danger" href="#" data-toggle="modal" data-target="#remove"
+                    data-title=" 超好吃牛肉麵" data-backdrop="static">刪除訂單</a>
+                </div>
+              </div>
+          </td>
+        </tr>
+        <div class="mt-3">
+          <tr class="">
+            <td class="text-right">2</td>
+            <td class="text-center" colspan="5">超好吃拉麵一盒</td>
+            <td class=" ">rona<span class="ml-2 badge badge-pill badge-danger">奧客</span></td>
+            <td class=" ">0930303030</td>
+            <td class="text-danger">未出貨</td>
+            <td class="text-right">$500</td>
+            <td class="text-center">
+              <div class="btn-group btn-group-toggle m-3" data-toggle="buttons">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-outline-secondary btn-sm">編輯</button>
+                  <button type="button" class="btn btn-outline-secondary btn-sm">查看</button>
+                  <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    其他
+                  </button>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">詳細資訊</a>
+                    <a class="dropdown-item" href="#">其他</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="#">刪除訂單</a>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </div>
+
+        <tr class="table-danger">
+          <td class="text-right">3</td>
+          <td class="text-center" colspan="5">超好吃乾麵一盒</td>
+          <td class=" ">fat-rona<span class="ml-2 badge badge-pill badge-danger">奧客</span></td>
+          <td class=" ">0930787878</td>
+          <td class="text-danger">未出貨</td>
+          <td class="text-right">$10000</td>
+          <td class="text-center">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <div class="btn-group m-3" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-outline-secondary btn-sm">編輯</button>
                 <button type="button" class="btn btn-outline-secondary btn-sm">查看</button>
                 <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm" data-toggle="dropdown"
@@ -359,44 +394,17 @@
             </div>
           </td>
         </tr>
-      </div>
-
-      <tr class="table-danger">
-        <td class="text-right">3</td>
-        <td class="text-center" colspan="5">超好吃乾麵一盒</td>
-        <td class=" ">fat-rona<span class="ml-3 badge badge-pill badge-danger">奧客</span></td>
-        <td class=" ">0930787878</td>
-        <td class="text-danger">未出貨</td>
-        <td class=" ">$10000</td>
-        <td class="text-center">
-          <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <div class="btn-group mb-3 mt-3" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-outline-secondary btn-sm">編輯</button>
-              <button type="button" class="btn btn-outline-secondary btn-sm">查看</button>
-              <button type="button" class="btn btn-outline-secondary dropdown-toggle btn-sm" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                其他
-              </button>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">詳細資訊</a>
-                <a class="dropdown-item" href="#">其他</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item text-danger" href="#">刪除訂單</a>
-              </div>
+        <tr>
+          <td colspan="12">
+            <div class="progress mt-3 ml-3">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
+                aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
             </div>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td colspan="5">
-          <div class="progress mt-3">
-            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
-              aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <div class="mt-5 container d-flex">
     <div class="m-auto">
@@ -422,20 +430,9 @@
     </div>
   </div>
 
-
-
-
   <footer class="bg-secondary text-light mt-3">
     <div class="p-2 text-center">電商後台管理系統</div>
   </footer>
-
-
-
-
-
-
-
-
 </body>
 
 
