@@ -1,0 +1,45 @@
+.btn{
+    border-width: 1px;
+}
+//buy-cart
+.btn-cart{
+    border-width: 2px;
+    background-color: transparent;
+    position: relative;
+}
+.btn-cart .badge{
+    position: absolute;
+    right: -1px;
+    top: -1px;
+}
+.dropdown-menu-right{
+    right: 0;
+    left: auto;
+}
+.header-carousel-item{
+    height: 500px;
+    background-position: center;
+    min-height: 400px;
+}
+.carousel-caption{
+    background: rgba(0,0,0,.3);
+}
+@media (min-width:768px){
+    .text-md-dark{
+        color: #333;
+    }
+}
+.carousel-caption{
+    border-radius: 10px;
+}
+//CARD 陰影特效
+.box-shadow{
+    box-shadow:0 3px 5px rgba(0,0,0,0.16)
+}
+.box-shadow:hover{
+    box-shadow:0 4px 10px rgba(0,0,0,0.24)
+}
+
+.fp{
+    height: 50px;
+}
