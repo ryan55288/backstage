@@ -57,6 +57,10 @@ tbody td, thead th {
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.24);
 }
 
+.card-high {
+  height: 450px;
+}
+
 .fp {
   height: 50px;
 }
@@ -70,5 +74,20 @@ tbody td, thead th {
 
 .bg-lighter {
   background-color: rgba(255, 255, 255, 0.35);
+}
+
+.jumbotron-1-bg {
+  background-image: url(https://media.istockphoto.com/photos/interior-of-cozy-restaurant-loft-style-picture-id843610508?k=20&m=843610508&s=612x612&w=0&h=zDihg07dmPyyYPYtLUK-YGrZ2O-tPIMroNvN4DJfuc8=);
+  background-size: cover;
+  background-position: center center;
+  min-height: 400px;
+}
+
+.bg-lighter {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.alert-rounded {
+  border-radius: 50px;
 }
 /*# sourceMappingURL=all.css.map */
