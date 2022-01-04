@@ -39,7 +39,7 @@
                     <i class="fas fa-shopping-cart fa-2x"></i>
                     <span class="badge badge-pill badge-danger">12</span>
                 </button>
-                <div class="dropdown-menu dropdown-menu-right">
+                <div class="dropdown-menu dropdown-menu-right  ">
                     <table class="table table-hover">
                         <thead class="thead-dark">
                             <tr>
@@ -150,7 +150,7 @@
                         </div>
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                             data-parent="#accordionExample">
-                            <div class="card-body">
+                            <div class="card-body table-responsive">
                                 <table class="table table-hover">
                                     <thead class="thead-dark">
                                         <tr>
@@ -202,7 +202,7 @@
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom01">姓名:</label>
-                            <input type="text" class="form-control" id="validationCustom01" placeholder="請輸入姓名"
+                            <input type="text" class="form-control" id="nameid" placeholder="請輸入姓名"
                                 required>
                             <div class="valid-feedback">
                                 Looks good!
@@ -257,9 +257,14 @@
                         <a href="./total_step_2.html" id="next" class="btn btn-primary link btn-lg btn-block" type="submit">下一步</a>
                     </div>
                     <script>
-                        document.getElementById('next').onclick = function(){
-                        window.history.forward();
+                        document.getElementById('next').onclick = function () {
+                            window.history.forward();
                         }
+                        // document.getElementById('next').onclick = function () {
+                        //     let whoname = document.getElementById('nameid').value;
+                        //     alert(whoname);
+                        // }
+                        //---開發中--上一頁與下一頁不會彼此衝突
                     </script>
                 </form>
 
